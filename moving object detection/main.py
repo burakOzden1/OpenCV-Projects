@@ -1,6 +1,6 @@
 import cv2
 
-cap = cv2.VideoCapture("carBike5.mp4")
+cap = cv2.VideoCapture("video1.mp4")
 
 movingObjects = cv2.createBackgroundSubtractorMOG2()
 # Hareketli nesneleri algılamaya yardımcı ilk maskemizi uyguladık
