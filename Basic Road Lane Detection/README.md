@@ -91,6 +91,25 @@ def perspektifArea(img):
   <img width="960" height="540" src="https://github.com/burakOzden1/OpenCV-Projects/assets/133498595/f7c53ef1-34ca-4db2-a2fd-29764aaee35d">
 </p>
 
+```
+def cizgileriCiz(img):
+    lines = cv2.HoughLinesP(canny(transformedFrame), 3, np.pi/180, 1)
+    # HoughLinesP fonksiyonu yardımıyla, kenar fonksiyonu uyguladığımız penceremizde şeritlerimizin üzerini belirginleştiriyoruz.
+    for line in lines:
+        x1, y1, x2, y2 = line[0]
+        cv2.line(transformedFrame, (x1, y1), (x2, y2), (98, 98, 239), 3)
+    # Bu işlemi her frame için yapmamız gerekiyor, o yüzden for döngümüzden yararlanıyoruz.
+    return transformedFrame
+```
+
+
+
+
+
+
+
+
+
 
 
 
