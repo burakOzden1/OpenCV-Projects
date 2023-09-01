@@ -91,8 +91,10 @@ def perspektifArea(img):
   <img width="960" height="540" src="https://github.com/burakOzden1/OpenCV-Projects/assets/133498595/f7c53ef1-34ca-4db2-a2fd-29764aaee35d">
 </p>
 
+### 3.3 algılanan çizgileri gösteren fonksiyonumuz:
+
 ```
-def cizgileriCiz(img):
+def linesWrite(img):
     lines = cv2.HoughLinesP(canny(transformedFrame), 3, np.pi/180, 1)
     # HoughLinesP fonksiyonu yardımıyla, kenar fonksiyonu uyguladığımız penceremizde şeritlerimizin üzerini belirginleştiriyoruz.
     for line in lines:
@@ -102,6 +104,9 @@ def cizgileriCiz(img):
     return transformedFrame
 ```
 
+<p align="center">
+  <img width="960" height="540" src="https://github.com/burakOzden1/OpenCV-Projects/assets/133498595/de626933-b05a-47d0-b13a-76739bf24d35">
+</p>
 
 
 
