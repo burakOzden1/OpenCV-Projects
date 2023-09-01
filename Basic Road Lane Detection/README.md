@@ -31,6 +31,7 @@ while cap.isOpened():
 cap.release()
 cv2.destroyAllWindows()
 ```
+
 Buradan alacağımız çıktı şu şekilde olacaktır:
 
 <p align="center">
@@ -56,7 +57,7 @@ def canny(img):
   <img width="960" height="540" src="https://github.com/burakOzden1/OpenCV-Projects/assets/133498595/1fd9a8a6-66b5-4e5e-aafc-c60b6ce65ae3">
 </p>
 
-### 3.2 perspektifin uygulandığı fonksiyonumuz:
+### 3.2 Perspektifin uygulandığı fonksiyonumuz:
 
 ```
 def perspektifArea(img):
@@ -91,7 +92,7 @@ def perspektifArea(img):
   <img width="960" height="540" src="https://github.com/burakOzden1/OpenCV-Projects/assets/133498595/f7c53ef1-34ca-4db2-a2fd-29764aaee35d">
 </p>
 
-### 3.3 algılanan çizgileri gösteren fonksiyonumuz:
+### 3.3 Algılanan çizgileri gösteren fonksiyonumuz:
 
 ```
 def linesWrite(img):
@@ -180,33 +181,3 @@ while cap.isOpened():
 cap.release()
 cv2.destroyAllWindows()
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
