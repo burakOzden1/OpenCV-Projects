@@ -1,5 +1,5 @@
 # Merhaba arkadaşlar, video üzerinden basit bir şekilde şerit algılama uygulaması yapacağız.
-
+Not : İçerikte kullanılan video repository içerisinde bulunan images-videos klasöründedir.
 ### 1. Kütüphanelerimizi dahil ederek başlayalım.
 
 ```
