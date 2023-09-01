@@ -9,7 +9,7 @@ def canny(img):
     canny = cv2.Canny(blur, 70, 100)
     return canny
 
-def cizgileriCiz(img):
+def linesWrite(img):
     lines = cv2.HoughLinesP(canny(transformedFrame), 3, np.pi/180, 1)
     for line in lines:
         x1, y1, x2, y2 = line[0]
@@ -49,7 +49,7 @@ while cap.isOpened():
 
     cannyImg = canny(resizeImg)
     transformedFrame = perspektifArea(cannyImg)
-    lines = cizgileriCiz(transformedFrame)
+    lines = linesWrite(transformedFrame)
 
     plt.imshow(canny(lines))
 
@@ -59,7 +59,7 @@ while cap.isOpened():
     cv2.imshow("Transformed Frame", transformedFrame)
     cv2.imshow("Canny Transformed Frame", canny(transformedFrame))
 
-    if cv2.waitKey(300) & 0xFF == ord("q"):
+    if cv2.waitKey(30) & 0xFF == ord("q"):
         break
 
 cap.release()
