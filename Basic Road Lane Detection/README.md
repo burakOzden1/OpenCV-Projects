@@ -110,7 +110,7 @@ def linesWrite(img):
   <img width="960" height="540" src="https://github.com/burakOzden1/OpenCV-Projects/assets/133498595/de626933-b05a-47d0-b13a-76739bf24d35">
 </p>
 
-## Kodlarımıza toplu şekilde bir bakalım:
+## Kodlarımıza toplu bir şekilde bakalım:
 
 ```
 import cv2
