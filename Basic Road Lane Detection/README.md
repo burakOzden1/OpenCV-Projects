@@ -56,13 +56,40 @@ def canny(img):
   <img width="960" height="540" src="https://github.com/burakOzden1/OpenCV-Projects/assets/133498595/1fd9a8a6-66b5-4e5e-aafc-c60b6ce65ae3">
 </p>
 
-### 3.2 Canny kenar algılama fonksiyonumuz:
+### 3.2 perspektifin uygulandığı fonksiyonumuz:
 
+```
+def perspektifArea(img):
 
+    solAlt = (30, 520)
+    solUst = (280, 390)
+    sagUst = (680, 390)
+    sagAlt = (930, 520)
+    # Bu satırlarda perspektif uygulanacak penceremizin ölçülerini veriyoruz
 
+    points = np.array([solAlt, solUst, sagUst, sagAlt], np.int32)
+    points = points.reshape((-1, 1, 2))
+    cv2.polylines(resizeImg, [points], isClosed=True, color=(0, 255, 204), thickness=3)
+    # Burada ise ölçülerimize göre penceremizi çiziyoruz.
 
+    pts1 = np.float32([solUst, solAlt, sagUst, sagAlt])
+    pts2 = np.float32([[-30, -30], [-30, 570], [990, -30], [990, 570]])
+    # Bu satırlarda ayrı bir pencere oluşturmak için belirli ölçüleri giriyoruz.
 
+    matrix = cv2.getPerspectiveTransform(pts1, pts2)
+    transformedFrame = cv2.warpPerspective(resizeImg, matrix, (960, 540))
+    # Pencere ölçülerini alarak, değişkenlere atıyoruz.
 
+    return transformedFrame
+```
+Çıktılarımız:
+
+<p align="center">
+  <img width="960" height="540" src="https://github.com/burakOzden1/OpenCV-Projects/assets/133498595/a69bb1f8-14f2-4b8f-8971-7df20e678632">
+</p>
+<p align="center">
+  <img width="960" height="540" src="https://github.com/burakOzden1/OpenCV-Projects/assets/133498595/f7c53ef1-34ca-4db2-a2fd-29764aaee35d">
+</p>
 
 
 
