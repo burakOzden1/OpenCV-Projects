@@ -36,7 +36,7 @@ def perspektifArea(img):
     return transformedFrame
 
 
-cap = cv2.VideoCapture("C:\PROGRAMLAMA(MAIN)\Goruntu isleme\Temel OpenCV\img-video/roadVid9.mp4")
+cap = cv2.VideoCapture("roadVid9.mp4")
 
 while cap.isOpened():
     ret, frame = cap.read()
